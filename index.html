@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>User Agent Client Hints Test</title>
+</head>
+<body>
+<h2>User Agent</h2>
+<div id="userAgent" class="txt"></div>
+<br />
+
+<h2>User Agent Client Hints</h2>
+
+<div id="error" style="display:none">
+    <p class="txt">
+        ERROR: Your browser does not support the User-Agent Client Hints feature.<br/>
+        Chromium-based browsers you can enable these settings through the 'Experimental Web Platform features' option<br/>
+        <br/>
+        <i>chrome://flags/#enable-experimental-web-platform-features</i><br/>
+        (copy the link into a new browser tab)
+    </p>
+</div>
+
+<div id="userAgentClientHints">
+    <div>
+        <h3>・mobile?</h3>
+        <div id="mobile" class="txt"></div>
+    </div>
+    <br/>
+
+    <div>
+        <h3>・Browser Brand Data</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Version</th>
+                </tr>
+            </thead>
+            <tbody id="brands">
+                <tr>
+                    <td>key</td>
+                    <td>value</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <div id="highEntropyValues">
+        <h3>・High Entropy Values</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Key</th>
+                    <th scope="col">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Architecture</td>
+                    <td id="architecture" class="value"></td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td id="model" class="value"></td>
+                </tr>
+                <tr>
+                    <td>Platform</td>
+                    <td id="platform" class="value"></td>
+                </tr>
+                <tr>
+                    <td>Platform Version</td>
+                    <td id="platformVersion" class="value"></td>
+                </tr>
+                <tr>
+                    <td>UA Full Version</td>
+                    <td id="uaFullVersion" class="value"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
